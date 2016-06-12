@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="walk.css">
+</head>
+<body>
+	<div id="donorFormContainer">
+		<fieldset id="donorForm">
+			<legend>Donation info:</legend>
+			<p class="instructText">Please enter your full name:</p>
+			<input id="donorName" type="text" size="50">
+			<p class="instructText">Please enter your email address:</p>
+			<input type="email" id="e-mail" placeholder="you@example.com" required pattern="*@*" class="validate" size="50">
+
+			<p class="instructText">Please enter donation amount and select type:</p>
+			<label for="donationAmount">Donation: </label>
+			<input type="number" id="donationAmount">
+
+			<input type="radio" id="donateLumpSum" name="donationType" value="lump sum">
+			<label for="donateLumpSum">lump sum</label>
+			<input type="radio" id="donatePerLap" name="donationType" value="per lap">
+			<label for="donatePerLap">per lap</label>
+			<div id="buttonsDiv">
+				<button id="submitBtn" type="">Submit donation</button>
+				<button id="clearBtn" type="">Clear form</button>				
+			</div>
+		</fieldset>
+	</div>
+
+	<div id="donorTableContainer">
+		
+	</div>
+
+
+
+<!-- 	Create a donation submission page for a Walk-A-Thon that allows donors to enter their name, email and dollar amount & whether their donation is lump sum or per lap
+ --><!-- 	Your project should have one HTML file that has: -->
+
+<!-- 	• a form for user information submission
+	•the ability to select whether the donation will be a single amount or per lap -->
+<!-- 	• a table to display each donor's submission information -->
+<!-- 	• a button labeled Donate to process the submission -->
+<!-- 	• a button labeled Cancel to clear the submission form -->
+
+
+
+
+
+
+
+</body>
+<script type="text/javascript" src="walk.js"></script>
+<script type="text/javascript" src="donors.js"></script>
+</html>
