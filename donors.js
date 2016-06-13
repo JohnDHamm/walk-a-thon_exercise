@@ -1,15 +1,18 @@
 // The donor information should be stored as JS objects that contain their content type as keys and the submitted information as the value. {name: "John Donut", pledge: 70}
 
-var donors = (function (donors) {
+var donors = (function (donor) {
 	var donorList = [];
 
-	donors.addDonor = function(newDonor){
+	donor.addDonor = function(newDonor){
+		console.log("newDonor", newDonor);
+		console.log("donorList", donorList);
 		donorList.push(newDonor);
+		console.log("donorList", donorList);
+
+		return donorList;
 	};
 
-	donors.getDonorList = function() {
-		return donorList;
-	}
+	return donor;
 
 })(donors || {});
 
