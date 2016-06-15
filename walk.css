@@ -1,7 +1,31 @@
-table {
-	border-collapse: collapse;
+#donorFormContainer {
+	border: 1px solid darkblue;
+	border-radius: 5px;
 }
 
-th, td {
-	border: 1px solid black;
+#donorTableContainer {
+	border: 2px solid black;
+	border-radius: 5px;
 }
+
+#tableTitle {
+	font-size: 1.5em;
+	background: #333;
+	color: gold;
+	text-align: center;
+}
+
+#submitTitle {
+	background: gold;
+	color: #333;
+	text-align: center;
+}
+
+.instructText {
+	padding-top: 5px;
+}
+
+#buttonsDiv {
+	margin: 10px auto;
+}
+
