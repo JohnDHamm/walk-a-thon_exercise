@@ -18,6 +18,7 @@ function clearForm () {
 	amountInput.value = "";
 }
 
+
 function submitForm () {
 	var donorName = donorNameInput.value;
 	var donorEmail = donorEmailInput.value;
@@ -30,26 +31,43 @@ function submitForm () {
 	displayTable(newList);
 }
 
+
 function displayTable(list) {
 	console.log("list", list.length);
-	tableEl.innerHTML = "";
-	tableEl.innerHTML += `
-		<tr>
-			<th scope="col">Name</th>
+	tableEl.innerHTML = ""; //clear table
+	//create table column headings
+
+	var tableLabels = document.createElement("tr");
+	tableLabels.innerHTML = `<th scope="col">Name</th>
 			<th scope="col">Email</th>
 			<th scope="col">Pledge</th>
-			<th scope="col">Pledge Type</th>
-		</tr>`;
+			<th scope="col">Pledge Type</th>`;
+	tableEl.appendChild(tableLabels);
+	// tableEl.innerHTML += `
+	// 	<tr>
+	// 		<th scope="col">Name</th>
+	// 		<th scope="col">Email</th>
+	// 		<th scope="col">Pledge</th>
+	// 		<th scope="col">Pledge Type</th>
+	// 	</tr>`;
+
+	var rowTableBody = document.createElement("tbody");
+	tableEl.appendChild(rowTableBody);
+
+
+	// //loop through array to add rows of data
 	for (i = 0; i < list.length; i++) {
-		tableEl.innerHTML += `
-			<tr>
+		var newDonorRow = document.createElement("tr");
+		newDonorRow.innerHTML = `
 				<td>${list[i].name}</td>
 				<td>${list[i].email}</td>
 				<td>${list[i].pledge}</td>
-				<td>${list[i].pledge_type}</td>
-			</tr>`;
+				<td>${list[i].pledge_type}</td>`;
+		rowTableBody.appendChild(newDonorRow);
+		
 	};
 }
+
 
 
 // You should also create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.
